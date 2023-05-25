@@ -1,12 +1,18 @@
 
 import "./App.css";
 import Navbar from "./components/Nav/Navbar";
-import RecipesListPage from "./pages/RecipesListPage";
+import Footer from "./components/Footer/Footer"
+
 import "swiper/css";
 
 function App() {
   
-  return <Navbar/>;
+  return(
+        <div>
+          <Navbar/>
+          <Footer/>
+        </div>
+        );
 }
 
 export default App;

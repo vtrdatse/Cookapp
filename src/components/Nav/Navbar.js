@@ -12,7 +12,7 @@ export default class Navbar extends Component {
         return (
             <nav className='navbar__items'>
 
-                <h1 className='navbar__logo'>Recipes</h1>
+                <h1 className='navbar__logo'>Recipes Food</h1>
 
                 <div className='menu-icons' onClick =
                 {this.handleClick}>
