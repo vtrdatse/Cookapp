@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.banner-container {    padding: 50px 0px 20px;
+  height: 50vh;
+  overflow: hidden;
+}
+.banner-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-container {
+  background: #d29292;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10% 40px;
+}
+
+
+.ul-hozi{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:50px
+}
+
+.ul-hozi li{
+  font-weight: 700;
+}
+
+.flex-inger{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.flex-inger span{
+  margin-top: 30px;
+  width: 25%; text-align: center;
+}
+
+.platform-container{
+  background: #8aaebe;
+  margin: 50px 0px 30px;
+
+}
+
+.platform-container h3{
+background: #876b6a;
+text-align: center;
+padding: 10px 0px;
+text-transform: uppercase;}
+
+.flex-plat{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10%;
+  flex-wrap: wrap;
+gap:10px
+}
+.flex-plat div{
+  width: 20%; overflow: hidden;
+}
+.flex-plat div img{
+  width: 0100%;
+  height: 100%;object-fit: cover;
+}
+
+.SwiperSlide-container{
+  display: flex;
+  align-items: center;
+  gap:10px
+}
+.SwiperSlide-container img{
+  width: 150px; height: 150px;
+  overflow: hidden; border-radius: 100%;
+}
+
+.SwiperSlide-container div{
+  background: #8ea964;
+  color: beige;
+}
+.swiper-cp-container{
+  background-color: #88aec4;
+  margin-top: 30px;
+}
+.swiper-cp-container h3{
+background: #cabcaf;
+padding: 10px 30px;
+text-transform: uppercase;
+font-weight: 700;
+}
+
+.other-container{
+  margin-top: 30px;
+}
+
+.other-container h3{
+  background: #d9d9d9;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+
+.other-container > div{
+  display: flex;
+  padding: 30px 10%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.other-container div div{
+  background: #d9d9d9;
+  width: 30%;
+  margin-top: 30px;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container{
+  background: #d9d9d9;
+  display: flex;
+  align-items: center;justify-content: center;
+  height: 200px;
+  font-size: 30px;
+  font-weight: bold;
+}
