@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
+
 import "./App.css";
+import Navbar from "./components/Nav/Navbar";
 import RecipesListPage from "./pages/RecipesListPage";
 import "swiper/css";
 
 function App() {
-  return <RecipesListPage />;
+  
+  return <Navbar/>;
 }
 
 export default App;
