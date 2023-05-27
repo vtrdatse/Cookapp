@@ -13,7 +13,7 @@ const RecipesListPage = () => {
       title: "Lorem is applet",
       slides: [
         {
-          img: "https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg",
+          img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D08JdNj8jGHk&psig=AOvVaw3DtoZJ9uHuZv95Q9dHtOVm&ust=1685089909187000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLiG7Z2HkP8CFQAAAAAdAAAAABAE",
           text: "Lorem ",
           desc: "loreme is applet",
         },

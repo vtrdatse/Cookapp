@@ -8,28 +8,28 @@ const Platform = () => {
       </h3>
       <div className="flex-plat">
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>{" "}
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>{" "}
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>{" "}
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>{" "}
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>{" "}
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>{" "}
         <div>
-          <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
+          <img src="https://i.ytimg.com/vi/08JdNj8jGHk/maxresdefault.jpg" />
         </div>
       </div>
     </div>
