@@ -1,10 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
-import RecipesListPage from "./pages/RecipesListPage";
-import "swiper/css";
+import logo from './logo.svg';
+import './App.css';
+import RecipesListPage from './pages/RecipesListPage';
+import Home from './home/Home';
+import 'swiper/css';
 
 function App() {
-  return <RecipesListPage />;
+	return (
+		<>
+			<RecipesListPage />
+			<Home />
+		</>
+	);
 }
 
 export default App;

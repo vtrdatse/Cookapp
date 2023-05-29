@@ -1,0 +1,36 @@
+.container .card-container {
+	padding-bottom: 100px;
+}
+
+.container .card-container h2 {
+	margin: 30px 0;
+	background-color: #d9d9d9;
+	text-align: left;
+	height: 40px;
+	padding-top: 10px;
+}
+
+.container .card-container .card {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.container .card-container .card .card-block {
+	margin: 20px;
+	background-color: #d9d9d9;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+.container .card-container .card .card-block .card-block_img {
+	width: 300px;
+	height: 300px;
+}
+
+.container .card-container .card .card-block .card-block_img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}
