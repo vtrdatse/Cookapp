@@ -1,12 +1,12 @@
 import "./App.css";
-import Footer from "./components/Footer/Footer"
-import "swiper/css";
+import Login from "./login/Login";
+
 
 function App() {
   
   return(
         <div>
-          <Footer/>
+          <Login/>
         </div>
         );
 }
