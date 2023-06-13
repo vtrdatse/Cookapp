@@ -1,10 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import RecipesListPage from './pages/RecipesListPage';
-import 'swiper/css';
+import React from 'react';
+import Admin from './admin/admin';
 
-function App() {
-	return <RecipesListPage />;
+export default function App() {
+	return <Admin />;
 }
-
-export default App;
