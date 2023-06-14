@@ -1,0 +1,54 @@
+header {
+  font-size: 1.5rem;
+  color:rgb(119, 119, 252);
+  font-weight: 700;
+  text-align: center;
+}
+
+.infoform {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+label {
+  margin-top: 1rem;
+}
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.25rem;
+  outline: none;
+}
+
+button {
+  margin-top: 50px;
+  cursor: pointer;
+  align-self: normal;
+  padding: 0.5rem;
+  background-color: rgb(104, 187, 255);
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.errorMsg {
+  
+  max-width: 100%;
+  font-size:0.75rem;
+  color:rgb(248, 106, 106);
+}
+
+h3{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+}
+a{
+  text-decoration: none;
+}

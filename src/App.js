@@ -1,14 +1,13 @@
-import "./App.css";
-import Login from "./login/Login";
+
+import Form from "./login/Form";
 
 
 function App() {
   
   return(
         <div>
-          <Login/>
+         <Form/>
         </div>
         );
 }
-
 export default App;
