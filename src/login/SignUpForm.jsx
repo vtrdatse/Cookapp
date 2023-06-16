@@ -115,7 +115,7 @@ function SignUpForm(){
 
 
         <button type="submit">Sign Up</button>
-        <h3><Link to="/login">Already have an account?</Link></h3>
+        <h3>Already have an account?<Link to="/login">Login</Link></h3>
       </form>
     </section>
   );

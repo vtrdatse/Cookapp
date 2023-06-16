@@ -62,7 +62,7 @@ function LoginFrom() {
 
                 <button type="submit">Login</button>
                     <h3 className='text'><Link to="/forgotpassword">Forgot password?</Link></h3>
-                <h3 className='text'><Link to="/signup">Don't have an account? Sign Up</Link></h3>
+                <h3 className='text'>Don't have an account? <Link to="/signup">Sign Up</Link></h3>
                 
             </form>
         </section> 
