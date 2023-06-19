@@ -14,11 +14,13 @@ li {
   list-style: none;
 }
 
-.banner-container {    padding: 50px 0px 20px;
+.banner-container {
+  padding: 50px 0px 20px;
   height: 50vh;
   overflow: hidden;
 }
-.banner-container img{
+
+.banner-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -33,97 +35,109 @@ li {
 }
 
 
-.ul-hozi{
+.ul-hozi {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:50px
+  gap: 50px
 }
 
-.ul-hozi li{
+.ul-hozi li {
   font-weight: 700;
 }
 
-.flex-inger{
+.flex-inger {
   display: flex;
   flex-wrap: wrap;
 
 }
-.flex-inger span{
+
+.flex-inger span {
   margin-top: 30px;
-  width: 25%; text-align: center;
+  width: 25%;
+  text-align: center;
 }
 
-.platform-container{
+.platform-container {
   background: #8aaebe;
   margin: 50px 0px 30px;
 
 }
 
-.platform-container h3{
-background: #876b6a;
-text-align: center;
-padding: 10px 0px;
-text-transform: uppercase;}
+.platform-container h3 {
+  background: #876b6a;
+  text-align: center;
+  padding: 10px 0px;
+  text-transform: uppercase;
+}
 
-.flex-plat{
+.flex-plat {
   display: flex;
   justify-content: space-between;
   padding: 30px 10%;
   flex-wrap: wrap;
-gap:10px
-}
-.flex-plat div{
-  width: 20%; overflow: hidden;
-}
-.flex-plat div img{
-  width: 0100%;
-  height: 100%;object-fit: cover;
+  gap: 10px
 }
 
-.SwiperSlide-container{
+.flex-plat div {
+  width: 20%;
+  overflow: hidden;
+}
+
+.flex-plat div img {
+  width: 0100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.SwiperSlide-container {
   display: flex;
   align-items: center;
-  gap:10px
-}
-.SwiperSlide-container img{
-  width: 150px; height: 150px;
-  overflow: hidden; border-radius: 100%;
+  gap: 10px
 }
 
-.SwiperSlide-container div{
+.SwiperSlide-container img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.SwiperSlide-container div {
   background: #8ea964;
   color: beige;
 }
-.swiper-cp-container{
+
+.swiper-cp-container {
   background-color: #88aec4;
   margin-top: 30px;
 }
-.swiper-cp-container h3{
-background: #cabcaf;
-padding: 10px 30px;
-text-transform: uppercase;
-font-weight: 700;
+
+.swiper-cp-container h3 {
+  background: #cabcaf;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.other-container{
+.other-container {
   margin-top: 30px;
 }
 
-.other-container h3{
+.other-container h3 {
   background: #d9d9d9;
   padding: 10px 30px;
   text-transform: uppercase;
 }
 
-.other-container > div{
+.other-container>div {
   display: flex;
   padding: 30px 10%;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.other-container div div{
+.other-container div div {
   background: #d9d9d9;
   width: 30%;
   margin-top: 30px;
@@ -132,13 +146,249 @@ font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.footer-container{
+.footer-container {
   background: #d9d9d9;
   display: flex;
-  align-items: center;justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 200px;
   font-size: 30px;
   font-weight: bold;
+}
+
+.details-container {}
+
+.details-route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 5%;
+}
+
+.details-route span {
+  font-weight: 600;
+}
+
+.detail-summary {
+  display: flex;
+  padding: 10px 5%;
+  gap: 20px;
+}
+
+.detail-summary>div {
+  width: 50%;
+  overflow: hidden;
+
+}
+
+.detail-summary-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.detail-summary-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnails {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+
+}
+
+.thumbnails img {
+  width: 20%;
+}
+
+.line-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.detail-summary-text .star-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.detail-summary-text .star-list img {
+  width: 20px;
+}
+
+.line-3 {
+  text-transform: uppercase;
+
+}
+
+.line-3 p {
+  margin-top: 30px;
+}
+
+.line-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  margin-top: 30px;
+}
+
+.line-4 .action-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  background-color: greenyellow;
+  padding: 7px 15px;
+}
+
+.line-4 .action-item img {
+  width: 30px;
+}
+
+.details-view-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+  gap: 30px;
+}
+
+.details-view-container .details-view-text {
+  width: 60%;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #e6dbc7;
+  padding: 30px;
+
+}
+
+.details-view-container .box {
+  width: 38%;
+  height: 500px;
+  background: brown;
+}
+
+.details-view-container .details-view-text .ss-1 p {
+  margin-top: 10px;
+}
+
+.ss-2 ul li {
+  list-style: disc;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.ss-3 {
+  background: #ffa7a7;
+  width: max-content;
+  padding: 30px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.ss-3 .nutrition-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ss-3 .nutrition-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rate-view-container {
+  background: #ffd6d6;
+  margin: 30px auto;
+  width: 90%;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.rate-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #c2fcc0;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.rate-view>img {
+  width: 50px;
+}
+
+.rate-view .add {
+  background: #ff0000;
+  padding: 10px 30px;
+  color: #fff;
+
+}
+
+.hr {
+  background: #000;
+  width: 800px;
+  height: 1px;
+}
+
+.rate-view .ss-1 {
+  padding: 20px 0px;
+}
+
+.rate-view .ss-1 p {
+  margin-bottom: 10px;
+}
+
+.rate-view .ss-1 .star-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.rate-view .ss-1 .star-list img {
+  width: 20px;
+}
+
+
+.rate-view .ss-2 .review-container {
+  background: greenyellow;
+  width: 700px;
+  padding: 20px;
+  margin: 40px auto;
+}
+
+.rate-view .ss-2 .review-container .user-review {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rate-view .ss-2 .review-container .user-review img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.rate-array {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

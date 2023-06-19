@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/ui/Header";
 import Banner from "../components/Banner";
-import Ingerdient from "../components/Ingerdient";
+import Ingredient from "../components/Ingredient";
 import Platform from "../components/Platform";
 import SwiperCP from "../components/SwiperCP";
 import Other from "../components/Order";
@@ -114,7 +114,7 @@ const RecipesListPage = () => {
     <div>
       <Header />
       <Banner />
-      <Ingerdient />
+      <Ingredient />
       <Platform />
       {SWIPER_CP.map((item, index) => (
         <SwiperCP data={item} />
