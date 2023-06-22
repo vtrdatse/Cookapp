@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Grid from '@mui/material/Grid';
 
@@ -24,16 +9,16 @@ import DashboardLayout from '../../examples/LayoutContainers/DashboardLayout';
 import DashboardNavbar from '../../examples/Navbars/DashboardNavbar';
 import Footer from '../../examples/Footer';
 import ComplexStatisticsCard from '../../examples/Cards/StatisticsCards/ComplexStatisticsCard';
-import { MdToday, MdPersonAdd, MdRestaurant, MdPerson } from 'react-icons/md';
+import { MdToday, MdRestaurant, MdPerson } from 'react-icons/md';
 import { LuChefHat } from 'react-icons/lu';
-import useFetchData from '../useFetchData';
-import { PieChart } from 'recharts';
-function Dashboard() {
-	const { data: RecipePosts } = useFetchData('https://cookappapi.azurewebsites.net/api/RecipePosts/getallposts');
-	const { data: Accounts } = useFetchData('https://cookappapi.azurewebsites.net/api/Accounts/getallaccount');
+import Data from './data/reportsBarChartData';
+import PieChart from '../../examples/Charts/PieChart';
 
-	const user = Accounts?.filter((account) => account.roleid == 3);
-	const chef = Accounts?.filter((account) => account.roleid == 2);
+function Dashboard() {
+	const { accounts, recipePosts, dataChart } = Data();
+	const user = accounts?.filter((account) => account.roleid == 3);
+	const chef = accounts?.filter((account) => account.roleid == 2);
+
 	return (
 		<DashboardLayout>
 			<DashboardNavbar />
@@ -49,7 +34,7 @@ function Dashboard() {
 								percentage={{
 									color: 'success',
 									amount: '+55%',
-									label: 'than lask week'
+									label: 'than last week'
 								}}
 							/>
 						</MDBox>
@@ -60,7 +45,7 @@ function Dashboard() {
 								color="success"
 								icon={<MdRestaurant />}
 								title="Recipes"
-								count={RecipePosts?.length}
+								count={recipePosts?.length}
 								percentage={{
 									color: 'success',
 									amount: '+1%',
@@ -95,6 +80,21 @@ function Dashboard() {
 									amount: '',
 									label: 'Just updated'
 								}}
+							/>
+						</MDBox>
+					</Grid>
+				</Grid>
+			</MDBox>
+			<MDBox mt={4.5}>
+				<Grid container spacing={3}>
+					<Grid item xs={12} md={6} lg={4}>
+						<MDBox mb={3}>
+							<PieChart
+								icon={<LuChefHat />}
+								title="RecipePost"
+								description="Chart"
+								height={400}
+								chart={dataChart}
 							/>
 						</MDBox>
 					</Grid>
