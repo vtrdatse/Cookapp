@@ -8,6 +8,7 @@ import 'swiper/css';
 
 
 function App() {
+	// return <RecipesListPage />;
 	return <RecipesDetailPage />;
 }
 
