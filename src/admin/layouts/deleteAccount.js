@@ -1,18 +1,13 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const deleteAccount = async (id) => {
 	try {
-		const response = await axios.delete(`https://cookappapisu23.azurewebsites.net/api/Accounts/${id}`, {
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		});
+		await axios.delete(`https://localhost:7250/api/Accounts1/${id}`);
 
-		if (response.status >= 200 && response.status <= 299) {
-			console.log('Account deleted successfully');
-		}
+		toast.success('Delete User Success!!');
 	} catch (error) {
-		console.error('Failed to delete account:', error);
+		toast.error('Delete User Fail!!');
 	}
 };
 

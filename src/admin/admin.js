@@ -28,6 +28,8 @@ import routes from './routes';
 import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from './context';
 import brandWhite from './assets/images/logo-ct.png';
 import brandDark from './assets/images/logo-ct-dark.png';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Admin() {
 	const [controller, dispatch] = useMaterialUIController();
@@ -138,53 +140,68 @@ export default function Admin() {
 		</MDBox>
 	);
 
-	return direction === 'rtl' ? (
-		<CacheProvider value={rtlCache}>
-			<ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
-				<CssBaseline />
-				{layout === 'dashboard' && (
-					<>
-						<Sidenav
-							color={sidenavColor}
-							brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-							brandName="Admin Dashboard"
-							routes={routes}
-							onMouseEnter={handleOnMouseEnter}
-							onMouseLeave={handleOnMouseLeave}
-						/>
-						<Configurator />
-						{configsButton}
-					</>
-				)}
-				{layout === 'vr' && <Configurator />}
-				<Routes>
-					{getRoutes(routes)}
-					<Route path="*" element={<Navigate to="/dashboard" />} />
-				</Routes>
-			</ThemeProvider>
-		</CacheProvider>
-	) : (
-		<ThemeProvider theme={darkMode ? themeDark : theme}>
-			<CssBaseline />
-			{layout === 'dashboard' && (
-				<>
-					<Sidenav
-						color={sidenavColor}
-						brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-						brandName="Admin Dashboard"
-						routes={routes}
-						onMouseEnter={handleOnMouseEnter}
-						onMouseLeave={handleOnMouseLeave}
-					/>
-					<Configurator />
-					{configsButton}
-				</>
+	return (
+		<>
+			{direction === 'rtl' ? (
+				<CacheProvider value={rtlCache}>
+					<ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
+						<CssBaseline />
+						{layout === 'dashboard' && (
+							<>
+								<Sidenav
+									color={sidenavColor}
+									brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
+									brandName="Admin Dashboard"
+									routes={routes}
+									onMouseEnter={handleOnMouseEnter}
+									onMouseLeave={handleOnMouseLeave}
+								/>
+								<Configurator />
+								{configsButton}
+							</>
+						)}
+						{layout === 'vr' && <Configurator />}
+						<Routes>
+							{getRoutes(routes)}
+							<Route path="*" element={<Navigate to="/dashboard" />} />
+						</Routes>
+					</ThemeProvider>
+				</CacheProvider>
+			) : (
+				<ThemeProvider theme={darkMode ? themeDark : theme}>
+					<CssBaseline />
+					{layout === 'dashboard' && (
+						<>
+							<Sidenav
+								color={sidenavColor}
+								brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
+								brandName="Admin Dashboard"
+								routes={routes}
+								onMouseEnter={handleOnMouseEnter}
+								onMouseLeave={handleOnMouseLeave}
+							/>
+							<Configurator />
+							{configsButton}
+						</>
+					)}
+					{layout === 'vr' && <Configurator />}
+					<Routes>
+						{getRoutes(routes)}
+						<Route path="*" element={<Navigate to="/dashboard" />} />
+					</Routes>
+				</ThemeProvider>
 			)}
-			{layout === 'vr' && <Configurator />}
-			<Routes>
-				{getRoutes(routes)}
-				<Route path="*" element={<Navigate to="/dashboard" />} />
-			</Routes>
-		</ThemeProvider>
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
+		</>
 	);
 }

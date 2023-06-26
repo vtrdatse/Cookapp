@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import MDInputRoot from './MDInputRoot';
 
 const MDInput = forwardRef(({ error, success, disabled, ...rest }, ref) => (
-	<MDInputRoot {...rest} ref={ref} ownerState={{ error, success, disabled }} />
+	<MDInputRoot sx={{ width: '350px' }} {...rest} ref={ref} ownerState={{ error, success, disabled }} />
 ));
 
 // Setting default values for the props of MDInput

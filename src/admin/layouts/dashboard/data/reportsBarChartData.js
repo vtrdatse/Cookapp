@@ -1,8 +1,9 @@
-import useFetchData from '../../useFetchData';
+import FetchData from '../../fetchData';
 
 const useReportsBarChartData = () => {
-	const { data: recipePosts } = useFetchData('https://cookappapisu23.azurewebsites.net/api/RecipePosts');
-	const { data: accounts } = useFetchData('https://cookappapisu23.azurewebsites.net/api/Accounts');
+	const { data: recipePosts } = FetchData('https://localhost:7250/api/RecipePosts');
+	console.log(recipePosts);
+	const { data: accounts } = FetchData('https://localhost:7250/api/Accounts1');
 	const roleUser = 3;
 	const roleChef = 2;
 	const roleAdmin = 1;

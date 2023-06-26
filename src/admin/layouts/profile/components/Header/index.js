@@ -22,13 +22,13 @@ import breakpoints from '../../../../assets/theme/base/breakpoints';
 // Images
 import burceMars from '../../../../assets/images/bruce-mars.jpg';
 import backgroundImage from '../../../../assets/images/bg-profile.jpeg';
-import useFetchData from '../../../useFetchData';
+import FetchData from '../../../fetchData';
 import { Button } from '@mui/material';
 
 function Header({ children }) {
 	const [tabsOrientation, setTabsOrientation] = useState('horizontal');
 	const [tabValue, setTabValue] = useState(0);
-	const { data } = useFetchData('https://cookappapisu23.azurewebsites.net/api/Accounts/1');
+	const { data } = FetchData('https://cookappapisu23.azurewebsites.net/api/Accounts/1');
 	useEffect(() => {
 		// A function that sets the orientation state of the tabs.
 		function handleTabsOrientation() {

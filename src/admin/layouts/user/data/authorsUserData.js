@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import MDBox from '../../../components/MDBox';
 import MDTypography from '../../../components/MDTypography';
-import MDAvatar from '../../../components/MDAvatar';
+import MDButton from '../../../components/MDButton';
+import MDInput from '../../../components/MDInput';
 import MDBadge from '../../../components/MDBadge';
-import useFetchData from '../../useFetchData';
+import { toast } from 'react-toastify';
 
 // Images
 import team2 from '../../../assets/images/team-2.jpg';
-import UpdateAccount from '../../updateAccount';
+import updateAccount from '../../updateAccount';
 import deleteAccount from '../../deleteAccount';
+import axios from 'axios';
+import { Card, Modal } from '@mui/material';
 
-const Author = ({ image, name, id }) => (
+const Author = ({ name, id }) => (
 	<MDBox display="flex" alignItems="center" lineHeight={1}>
-		<MDAvatar src={image} name={name} size="sm" />
 		<MDBox ml={2} lineHeight={1}>
 			<MDTypography display="block" variant="button" fontWeight="medium">
 				{name}
@@ -30,31 +32,43 @@ const Function = ({ title }) => (
 	</MDBox>
 );
 
-const useAccountsData = () => {
-	const { data } = useFetchData('https://cookappapisu23.azurewebsites.net/api/Accounts');
-	const filteredData = data?.filter((item) => item.roleid === '3');
-
-	return filteredData || [];
-};
-
 export default function Data() {
-	const accountsData = useAccountsData();
+	const [accountData, setData] = useState([]);
 
-	const handleChangeActive = (id) => {
-		const accountChange = accountsData?.find((item) => item.id == id);
-		accountChange && (accountChange.isActive = !accountChange.isActive);
-		UpdateAccount(id, accountChange);
+	useEffect(() => {
+		const getData = async () => {
+			const { data } = await axios.get('https://localhost:7250/api/Accounts1');
+			const filteredData = data?.filter((item) => item.roleid === '3');
+			setData(filteredData);
+		};
+		getData();
+	}, []);
+
+	const handleChangeActive = async (item) => {
+		const updatedData = accountData.map((dataItem) => {
+			if (dataItem.id === item.id) {
+				const updatedItem = { ...dataItem, isActive: !dataItem.isActive };
+				updateAccount(dataItem.id, updatedItem);
+				return updatedItem;
+			}
+			return dataItem;
+		});
+
+		setData(updatedData);
 	};
 
-	const handleDelete = (id) => {
-		deleteAccount(id);
+	const handleDelete = (item) => {
+		deleteAccount(item.id);
+		const updatedData = accountData.filter((dataItem) => dataItem.id !== item.id);
+		setData(updatedData);
 	};
+	const handleEditUser = (item) => {};
 
-	const rows = accountsData.map((item) => ({
+	const rows = accountData.map((item) => ({
 		author: <Author image={team2} name={item.fullName} id={item.id} />,
 		password: <Function title={item.password} />,
 		state: (
-			<MDBox ml={-1} onClick={() => handleChangeActive(item.id)}>
+			<MDBox ml={-1} onClick={() => handleChangeActive(item)}>
 				<MDBadge
 					badgeContent={item.isActive ? 'Active' : 'Banned'}
 					color={item.isActive ? 'success' : 'dark'}
@@ -63,9 +77,16 @@ export default function Data() {
 				/>
 			</MDBox>
 		),
-		view: (
-			<MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-				View
+		roleid: (
+			<MDTypography
+				component="a"
+				href="#"
+				variant="caption"
+				color="text"
+				fontWeight="medium"
+				onClick={() => handleEditUser(item)}
+			>
+				{item.roleid}
 			</MDTypography>
 		),
 		delete: (
@@ -87,7 +108,7 @@ export default function Data() {
 			{ Header: 'author', accessor: 'author', width: '45%', align: 'left' },
 			{ Header: 'password', accessor: 'password', align: 'left' },
 			{ Header: 'state', accessor: 'state', align: 'center' },
-			{ Header: 'view', accessor: 'view', align: 'center' },
+			{ Header: 'roleid', accessor: 'roleid', align: 'center' },
 			{ Header: 'delete', accessor: 'delete', align: 'center' }
 		],
 		rows: rows || []

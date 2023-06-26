@@ -9,6 +9,7 @@ import { LuChefHat } from 'react-icons/lu';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Recipes from './layouts/recipes';
 
 const routes = [
 	{
@@ -22,7 +23,7 @@ const routes = [
 	{
 		type: 'collapse',
 		name: 'Users Management',
-		key: 'Users',
+		key: 'user',
 		icon: <ManageAccountsIcon fontSize="small" />,
 		route: '/user',
 		component: <Users />
@@ -30,10 +31,18 @@ const routes = [
 	{
 		type: 'collapse',
 		name: 'Chefs',
-		key: 'Chefs',
+		key: 'chef',
 		icon: <LuChefHat fontSize="small" />,
 		route: '/chef',
 		component: <Chefs />
+	},
+	{
+		type: 'collapse',
+		name: 'Recipes',
+		key: 'recipe',
+		icon: <LuChefHat fontSize="small" />,
+		route: '/recipe',
+		component: <Recipes />
 	},
 	{
 		type: 'collapse',

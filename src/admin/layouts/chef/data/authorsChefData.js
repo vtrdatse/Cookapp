@@ -3,7 +3,7 @@ import MDBox from '../../../components/MDBox';
 import MDTypography from '../../../components/MDTypography';
 import MDAvatar from '../../../components/MDAvatar';
 import MDBadge from '../../../components/MDBadge';
-import useFetchData from '../../useFetchData';
+import FetchData from '../../fetchData';
 
 // Images
 import team2 from '../../../assets/images/team-2.jpg';
@@ -29,15 +29,15 @@ const Function = ({ title }) => (
 	</MDBox>
 );
 
-const useAccountsData = () => {
-	const { data } = useFetchData('https://cookappapisu23.azurewebsites.net/api/Accounts');
+const accountData = () => {
+	const { data } = FetchData('https://localhost:7250/api/Accounts1');
 	const filteredData = data?.filter((item) => item.roleid === '2');
 
 	return filteredData || [];
 };
 
 export default function Data() {
-	const accountsData = useAccountsData();
+	const accountsData = accountData();
 
 	const handleChangeActive = (id) => {
 		const accountChange = accountsData?.find((item) => item.id == id);

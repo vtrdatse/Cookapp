@@ -13,10 +13,13 @@ import Footer from '../../examples/Footer';
 import DataTable from '../../examples/Tables/DataTable';
 // Data
 import authorsUserData from './data/authorsUserData';
+import { Button, Modal } from '@mui/material';
+import { useState } from 'react';
+import MDButton from '../../components/MDButton';
+import MDInput from '../../components/MDInput';
 
 function Users() {
 	const { columns, rows } = authorsUserData();
-
 	return (
 		<DashboardLayout>
 			<DashboardNavbar />

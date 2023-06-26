@@ -6,7 +6,7 @@ export default function Title1() {
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		async function fetchData() {
+		async function FetchData() {
 			try {
 				const response = await axios.get('https://cookappapisu23.azurewebsites.net/api/RecipePosts');
 				setData(response.data);
@@ -14,7 +14,7 @@ export default function Title1() {
 				console.error('Error fetching data:', error);
 			}
 		}
-		fetchData();
+		FetchData();
 	}, []);
 
 	return (
