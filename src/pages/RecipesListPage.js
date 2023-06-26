@@ -6,7 +6,7 @@ import Platform from "../components/Platform";
 import SwiperCP from "../components/SwiperCP";
 import Other from "../components/Order";
 import Footer from "../components/ui/Footer";
-
+import API from "../api.json";
 const RecipesListPage = () => {
   const SWIPER_CP = [
     {
@@ -115,7 +115,7 @@ const RecipesListPage = () => {
       <Header />
       <Banner />
       <Ingredient />
-      <Platform />
+      <Platform foods={API.food} />
       {SWIPER_CP.map((item, index) => (
         <SwiperCP data={item} />
       ))}

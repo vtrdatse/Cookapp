@@ -1,0 +1,174 @@
+{
+  "food": [
+    {
+      "id": "fried-chicken",
+      "name": "fried chicken",
+      "image": [
+        "https://cdn.tgdd.vn/Files/2021/01/13/1320026/cach-lam-ga-ran-kfc-bang-noi-chien-khong-dau-gion-rum-an-khong-ngay-202202231031137197.jpg",
+        "https://static-images.vnncdn.net/files/publish/2022/12/19/ga-ran-1179.jpg",
+        "https://static-images.vnncdn.net/files/publish/2022/12/19/ga-ran-1179.jpg",
+        "https://daynauan.info.vn/wp-content/uploads/2019/05/mo-quan-ga-ran.jpg"
+      ],
+      "rate": 3.6,
+      "reviews": {
+        "quantity": 21891,
+        "reviewers": [
+          {
+            "image": "https://vcdn1-vnexpress.vnecdn.net/2016/03/02/2-b1-a1-7612-1456906706.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=UOF9fo0yT4JKXvGf_kRHlQ",
+            "name": "join dany",
+            "content": "Although the restaurant doesn't seem to be crowded, the food service is a bit slow. In return the food tasted very good and was presented beautifully"
+          },
+          {
+            "image": "https://people.com/thmb/27Tj1Ufuupb64IdSR93XNZVYHBU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1019x100:1021x102)/Tribeca-Portraits-Nick-Jonas-061223-2-888bb14b30f740deb9f30dd84369c83f.jpg",
+            "name": "dieniel yue",
+            "content": "Temporarily okay. The restaurant has one or two good qualities. It can be a delicious food, helpful staff or a positive atmosphere. However, you have no interest to return."
+          }
+        ]
+      },
+      "summary": "Fried chicken is a popular and delicious dish. Fried chicken is usually prepared by frying or frying the chickens in hot oil until they are golden in color and the skin is crispy. The chicken inside is well cooked and delicious.",
+      "prepTime": 10,
+      "addTime": 20,
+      "cookTime": 30,
+      "totalTime": 60,
+      "sauce": "Prepare materials 4 chicken wings or chicken thighs 1 pack of Gungon Crispy Chicken Fried Powder 3 tablespoons honey 1 little white sesame 4 tablespoons         4 tablespoons chili sauce 2 tablespoons chili powder 1 tablespoon minced garlic     1 tablespoon minced ginger     3 tablespoons fish sauce",
+      "direction": "Dip the chicken pieces in the water powder Continue rolling through the dry flour and then drop into the frying pan for 5 minutes on each side Take it out and let it dry for about 5 minutes and then put it in the frying pan for a second time. The chicken wings turn golden crispy, then turn off the stove and drain. . Mix well 3 tablespoons of honey (additional sweetness depending on preference), 2 tablespoons of ketchup, 4 tablespoons of chili sauce, 3 tablespoons of fish sauce, 1 teaspoon of ground pepper, fragrant ginger, minced garlic on the stove, pour Prepare the sauce in the pan until the sauce is thick, then add the chicken and stir well. Put the chicken on a plate and sprinkle a little white sesame is done.",
+      "nutri": 124
+    },
+    {
+      "id": "hamburger",
+      "name": "hamburger",
+      "image": [
+        "https://junger.vn/medias/jungerb/images/t76e-hero.jpg",
+        "https://reviewaz.vn/storage/hamburger-mon-an-mang-huong-vi-chau-au-duoc-nhieu-nguoi-yeu-thich.png",
+        "https://reviewaz.vn/storage/hamburger-mon-an-mang-huong-vi-chau-au-duoc-nhieu-nguoi-yeu-thich.png",
+        "https://media.cnn.com/api/v1/images/stellar/prod/220428140436-04-classic-american-hamburgers.jpg?c=4x3"
+      ],
+      "rate": 4.2,
+      "reviews": {
+        "quantity": 13208,
+        "reviewers": [
+          {
+            "image": "https://randomuser.me/api/portraits/men/1.jpg",
+            "name": "John Doe",
+            "content": "The hamburger was juicy and flavorful. The bun was perfectly toasted. Definitely worth trying!"
+          },
+          {
+            "image": "https://randomuser.me/api/portraits/women/1.jpg",
+            "name": "Jane Smith",
+            "content": "The hamburger was disappointing. The patty was dry, and the overall taste was mediocre."
+          }
+        ]
+      },
+      "summary": "Hamburger is a classic American fast food. It consists of a grilled beef patty, lettuce, tomato, onion, cheese, and condiments, all sandwiched between two burger buns.",
+      "prepTime": 15,
+      "addTime": 5,
+      "cookTime": 10,
+      "totalTime": 30,
+      "sauce": "Ketchup, mayonnaise, mustard, BBQ sauce",
+      "direction": "1. Preheat the grill or stovetop pan.\n2. Season the beef patty with salt and pepper.\n3. Grill the patty for about 4-5 minutes on each side until cooked to desired doneness.\n4. Toast the burger buns on the grill or in a toaster.\n5. Assemble the burger by placing the patty on the bottom bun and adding lettuce, tomato, onion, cheese, and condiments of your choice.\n6. Top with the other half of the bun.\n7. Serve hot and enjoy!",
+      "nutri": 320
+    },
+    {
+      "id": "pizza",
+      "name": "pizza",
+      "image": [
+        "https://cdn.tgdd.vn/Files/2021/12/07/1402760/tong-hop-cac-cach-lam-pizza-chi-can-o-nha-cung-co-the-thuong-thuc-202112070252570032.jpg",
+        "https://cdn.tgdd.vn/Files/2021/12/11/1403806/tong-hop-4-cach-lam-pizza-tai-nha-ma-khong-can-lo-nuong-202112111511138589.jpg",
+        "https://img.dominos.vn/Pizzaminsea-Hai-San-Nhiet-Doi-Xot-Tieu.jpg",
+        "https://cdn.tgdd.vn/2021/09/CookDish/cach-bao-quan-pizza-de-banh-pizza-va-cach-ham-nong-banh-pizza-avt-1200x676.jpg"
+      ],
+      "rate": 4.5,
+      "reviews": {
+        "quantity": 18750,
+        "reviewers": [
+          {
+            "image": "https://randomuser.me/api/portraits/women/2.jpg",
+            "name": "Emily Johnson",
+            "content": "The pizza was fantastic! The crust was crispy, and the toppings were deliciously balanced. Highly recommended!"
+          },
+          {
+            "image": "https://randomuser.me/api/portraits/men/2.jpg",
+            "name": "Michael Wilson",
+            "content": "The pizza was underwhelming. The crust was too soggy, and the cheese tasted bland. Disappointed with the overall flavor."
+          }
+        ]
+      },
+      "summary": "Pizza is a popular Italian dish that consists of a round, flat dough topped with tomato sauce, cheese, and various toppings, which is then baked in an oven.",
+      "prepTime": 20,
+      "addTime": 10,
+      "cookTime": 15,
+      "totalTime": 45,
+      "sauce": "Tomato sauce, olive oil",
+      "direction": "1. Preheat the oven to the highest temperature.\n2. Roll out the pizza dough into a round shape.\n3. Spread a thin layer of tomato sauce evenly over the dough.\n4. Drizzle some olive oil over the sauce.\n5. Add your desired toppings, such as cheese, vegetables, meats, and herbs.\n6. Place the pizza in the preheated oven and bake for about 10-15 minutes or until the crust is golden and the cheese is melted.\n7. Remove from the oven and let it cool for a few minutes.\n8. Slice the pizza and serve hot.",
+      "nutri": 280
+    },
+    {
+      "id": "sushi",
+      "name": "sushi",
+      "image": [
+        "https://vinmec-prod.s3.amazonaws.com/images/20210317_143609_055773_sushi.max-800x800.jpg",
+        "https://media.istockphoto.com/id/1053854126/photo/all-you-can-eat-sushi.jpg?s=612x612&w=0&k=20&c=qqPJBYcxR0fgmzIFj_k2V6Mbo12hBBCucs1i5HcGYA0=",
+        "https://cdn.tgdd.vn/Files/2021/09/09/1381375/huong-dan-cach-lam-nigiri-sushi-noi-tieng-cua-nhat-ban-202109091522036328.jpg",
+        "https://alosushi.vn/images/ckeditor/images/sushi.png"
+      ],
+      "rate": 4.8,
+      "reviews": {
+        "quantity": 25103,
+        "reviewers": [
+          {
+            "image": "https://randomuser.me/api/portraits/men/3.jpg",
+            "name": "David Brown",
+            "content": "The sushi was amazing! The fish was fresh, and the rice was perfectly seasoned. Definitely one of the best sushi I've ever had."
+          },
+          {
+            "image": "https://randomuser.me/api/portraits/women/3.jpg",
+            "name": "Jessica Miller",
+            "content": "The sushi was mediocre. The fish didn't taste very fresh, and the rolls were poorly made. I've had better sushi elsewhere."
+          }
+        ]
+      },
+      "summary": "Sushi is a traditional Japanese dish that consists of vinegared rice combined with various ingredients such as raw or cooked seafood, vegetables, and seaweed.",
+      "prepTime": 30,
+      "addTime": 0,
+      "cookTime": 0,
+      "totalTime": 30,
+      "sauce": "Soy sauce, wasabi, pickled ginger",
+      "direction": "1. Cook sushi rice according to package instructions and let it cool.\n2. Prepare your choice of sushi fillings, such as fish, vegetables, and seafood.\n3. Place a sheet of nori (seaweed) on a bamboo sushi mat.\n4. Wet your hands with water to prevent sticking, then grab a handful of sushi rice and spread it evenly on the nori, leaving a small border at the top.\n5. Add your desired fillings in a line across the center of the rice.\n6. Roll the sushi tightly using the bamboo mat, applying gentle pressure.\n7. Wet a sharp knife and slice the sushi roll into bite-sized pieces.\n8. Serve the sushi with soy sauce, wasabi, and pickled ginger.",
+      "nutri": 180
+    },
+    {
+      "id": "spaghetti-bolognese",
+      "name": "spaghetti bolognese",
+      "image": [
+        "https://www.wcrf-uk.org/wp-content/uploads/2021/06/Spaghetti-bolognese-SQ-1200x900.jpg",
+        "https://img.taste.com.au/t6_BzNZ4/w1200-h630-cfill/taste/2016/11/spaghetti-bolognese-118369-2.jpg",
+        "https://images.aws.nestle.recipes/resized/6c6aeb4370d75bbe7c9791af28321b16_Spaghetti-Bolognese-Upside-Down_944_531.jpg",
+        "https://hips.hearstapps.com/hmg-prod/images/spaghetti-bolognese-1-1629902809.jpg?crop=1.00xw:0.803xh;0,0.173xh&resize=1200:*"
+      ],
+      "rate": 4.4,
+      "reviews": {
+        "quantity": 15234,
+        "reviewers": [
+          {
+            "image": "https://randomuser.me/api/portraits/men/4.jpg",
+            "name": "Christopher Wilson",
+            "content": "The spaghetti bolognese was delicious! The sauce was rich and flavorful, and the pasta was cooked perfectly. It was a satisfying meal."
+          },
+          {
+            "image": "https://randomuser.me/api/portraits/women/4.jpg",
+            "name": "Olivia Johnson",
+            "content": "The spaghetti bolognese was average. The sauce lacked depth, and the pasta was slightly overcooked. I've had better versions of this dish."
+          }
+        ]
+      },
+      "summary": "Spaghetti bolognese is a classic Italian pasta dish consisting of spaghetti noodles tossed in a meaty tomato sauce. It is often garnished with grated cheese and herbs.",
+      "prepTime": 15,
+      "addTime": 10,
+      "cookTime": 30,
+      "totalTime": 55,
+      "sauce": "Tomato sauce, ground beef, onions, garlic, carrots, celery, herbs, red wine",
+      "direction": "1. Heat olive oil in a large saucepan over medium heat.\n2. Add diced onions, minced garlic, chopped carrots, and chopped celery to the saucepan. Cook until the vegetables are softened.\n3. Add ground beef to the saucepan and cook until browned, breaking it up with a spoon.\n4. Pour in red wine and cook until the liquid is reduced.\n5. Stir in tomato sauce and herbs such as basil, oregano, and thyme.\n6. Simmer the sauce for about 20-30 minutes to allow the flavors to meld.\n7. Cook spaghetti noodles in boiling salted water until al dente.\n8. Drain the cooked spaghetti and toss it with the bolognese sauce.\n9. Serve the spaghetti bolognese hot, garnished with grated cheese and fresh herbs.",
+      "nutri": 420
+    }
+  ]
+}
