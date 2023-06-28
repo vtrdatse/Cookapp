@@ -1,14 +1,16 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { FaRegUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const MENU = ["HOME", "MENU", "ABOUT", "CONTACT"];
+  const MENU = ["HOME", "MENU", "ABOUT", "CONTACT"]
+    ;
   const RIGHT = [
     {
       icon: <BsSearch size={27} />,
     },
-    { icon: <FaRegUserCircle size={27} /> },
+    { icon: <FaRegUserCircle size={27} />, route: "profile" },
   ];
   return (
     <div className="header-container">
@@ -16,14 +18,28 @@ const Header = () => {
       <div className="">
         <ul className="ul-hozi">
           {MENU.map((menu) => (
-            <li key={menu}>{menu}</li>
+            <li key={menu}>
+              <Link
+                to={`/${menu}`}
+                style={{ color: "#000", textDecoration: "none" }}
+              >
+                {menu}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
       <div>
         <ul className="ul-hozi ">
           {RIGHT.map((right, index) => (
-            <li key={index}>{right.icon}</li>
+            <li key={index}>
+              <Link
+                to={`/${right?.route}`}
+                style={{ color: "#000", textDecoration: "none" }}
+              >
+                {right.icon}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>
