@@ -18,7 +18,7 @@ function Dashboard() {
 	const { accounts, recipePosts, dataChart } = Data();
 	const user = accounts?.filter((account) => account.roleid == 3);
 	const chef = accounts?.filter((account) => account.roleid == 2);
-
+	console.log('this is dashboard');
 	return (
 		<DashboardLayout>
 			<DashboardNavbar />

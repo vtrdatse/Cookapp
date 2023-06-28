@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import MDBox from '../../../components/MDBox';
 import MDTypography from '../../../components/MDTypography';
-import MDButton from '../../../components/MDButton';
-import MDInput from '../../../components/MDInput';
 import MDBadge from '../../../components/MDBadge';
-import { toast } from 'react-toastify';
 
 // Images
 import team2 from '../../../assets/images/team-2.jpg';
 import updateAccount from '../../updateAccount';
 import deleteAccount from '../../deleteAccount';
 import axios from 'axios';
-import { Card, Modal } from '@mui/material';
 
 const Author = ({ name, id }) => (
 	<MDBox display="flex" alignItems="center" lineHeight={1}>

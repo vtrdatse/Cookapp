@@ -2,11 +2,10 @@ import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import './Splide.scss';
-import FetchData from '../../admin/layouts/FetchData';
+import FetchData from '../../admin/layouts/fetchData';
 
 const Splides = () => {
-	const { data } = FetchData('https://cookappapisu23.azurewebsites.net/api/Accounts');
-	console.log(data.length);
+	// const { data } = FetchData('https://cookappapisu23.azurewebsites.net/api/Accounts');
 	return (
 		<div className="container">
 			<Splide

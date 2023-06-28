@@ -163,7 +163,7 @@ export default function Admin() {
 						{layout === 'vr' && <Configurator />}
 						<Routes>
 							{getRoutes(routes)}
-							<Route path="*" element={<Navigate to="/dashboard" />} />
+							<Route path="" element={<Navigate to="/admin/dashboard" />} />
 						</Routes>
 					</ThemeProvider>
 				</CacheProvider>
@@ -187,7 +187,7 @@ export default function Admin() {
 					{layout === 'vr' && <Configurator />}
 					<Routes>
 						{getRoutes(routes)}
-						<Route path="*" element={<Navigate to="/dashboard" />} />
+						<Route path="" element={<Navigate to="/admin/dashboard" />} />
 					</Routes>
 				</ThemeProvider>
 			)}

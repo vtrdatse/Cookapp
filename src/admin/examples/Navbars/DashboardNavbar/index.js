@@ -66,11 +66,6 @@ function DashboardNavbar({ absolute, light, isMini }) {
 				{isMini ? null : (
 					<MDBox sx={(theme) => navbarRow(theme, { isMini })}>
 						<MDBox color={light ? 'white' : 'inherit'}>
-							<Link to="/profile">
-								<IconButton sx={navbarIconButton} size="small" disableRipple>
-									<AccountCircleIcon sx={iconsStyle} fontSize="large" />
-								</IconButton>
-							</Link>
 							<IconButton
 								size="small"
 								disableRipple

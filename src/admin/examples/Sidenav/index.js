@@ -27,10 +27,11 @@ import sidenavLogoLabel from './styles/sidenav';
 import { useMaterialUIController, setMiniSidenav, setTransparentSidenav, setWhiteSidenav } from '../../context';
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
+	console.log(routes);
 	const [controller, dispatch] = useMaterialUIController();
 	const { miniSidenav, transparentSidenav, whiteSidenav, darkMode } = controller;
 	const location = useLocation();
-	const collapseName = location.pathname.replace('/', '');
+	const collapseName = location.pathname.replace('/admin/', '');
 
 	let textColor = 'white';
 
@@ -65,7 +66,6 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 	// Render all the routes from the routes.js (All the visible items on the Sidenav)
 	const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, href, route }) => {
 		let returnValue;
-
 		if (type === 'collapse') {
 			returnValue = href ? (
 				<Link href={href} key={key} target="_blank" rel="noreferrer" sx={{ textDecoration: 'none' }}>

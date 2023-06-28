@@ -17,7 +17,7 @@ const routes = [
 		name: 'Dashboard',
 		key: 'dashboard',
 		icon: <DashboardIcon fontSize="small" />,
-		route: '/dashboard',
+		route: 'dashboard',
 		component: <Dashboard />
 	},
 	{
@@ -25,7 +25,7 @@ const routes = [
 		name: 'Users Management',
 		key: 'user',
 		icon: <ManageAccountsIcon fontSize="small" />,
-		route: '/user',
+		route: 'user',
 		component: <Users />
 	},
 	{
@@ -33,7 +33,7 @@ const routes = [
 		name: 'Chefs',
 		key: 'chef',
 		icon: <LuChefHat fontSize="small" />,
-		route: '/chef',
+		route: 'chef',
 		component: <Chefs />
 	},
 	{
@@ -41,7 +41,7 @@ const routes = [
 		name: 'Recipes',
 		key: 'recipe',
 		icon: <LuChefHat fontSize="small" />,
-		route: '/recipe',
+		route: 'recipe',
 		component: <Recipes />
 	},
 	{
@@ -49,7 +49,7 @@ const routes = [
 		name: 'Profile',
 		key: 'profile',
 		icon: <AccountCircleIcon fontSize="small" />,
-		route: '/profile',
+		route: 'profile',
 		component: <Profile />
 	}
 ];
