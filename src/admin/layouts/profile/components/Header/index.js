@@ -93,11 +93,6 @@ function Header({ children }) {
 							</MDTypography>
 						</MDBox>
 					</Grid>
-					<Grid item xs={12} md={6} lg={4} sx={{ ml: 'auto' }}>
-						<AppBar position="static">
-							<Button variant="container">Add new recipes</Button>
-						</AppBar>
-					</Grid>
 				</Grid>
 				{children}
 			</Card>

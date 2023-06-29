@@ -28,7 +28,8 @@ import team4 from '../../assets/images/team-4.jpg';
 import FetchData from '../fetchData';
 
 function Overview() {
-	const { data } = FetchData('https://cookappapisu23.azurewebsites.net/api/Accounts/1');
+	const { data } = FetchData('https://localhost:7250/api/Accounts/1');
+
 	return (
 		<DashboardLayout>
 			<DashboardNavbar />

@@ -2,7 +2,7 @@ import { toast } from 'react-toastify';
 
 const updateAccount = async (id, updatedData) => {
 	try {
-		const response = await fetch(`https://localhost:7250/api/Accounts1/${id}`, {
+		const response = await fetch(`https://localhost:7250/api/Accounts/${id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',

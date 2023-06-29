@@ -11,7 +11,7 @@ import MDButton from '../../../components/MDButton';
 // Material Dashboard 2 React context
 import { useMaterialUIController } from '../../../context';
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill({ name, id, tag, content, noGutter }) {
 	const [controller] = useMaterialUIController();
 	const { darkMode } = controller;
 
@@ -42,34 +42,34 @@ function Bill({ name, company, email, vat, noGutter }) {
 					<MDBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
 						<MDBox mr={1}>
 							<MDButton variant="text" color="error">
-								<Icon>delete</Icon>&nbsp;delete
+								&nbsp;delete
 							</MDButton>
 						</MDBox>
 						<MDButton variant="text" color={darkMode ? 'white' : 'dark'}>
-							<Icon>edit</Icon>&nbsp;edit
+							&nbsp;goto
 						</MDButton>
 					</MDBox>
 				</MDBox>
 				<MDBox mb={1} lineHeight={0}>
 					<MDTypography variant="caption" color="text">
-						Company Name:&nbsp;&nbsp;&nbsp;
+						id:&nbsp;&nbsp;&nbsp;
 						<MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
-							{company}
+							{id}
 						</MDTypography>
 					</MDTypography>
 				</MDBox>
 				<MDBox mb={1} lineHeight={0}>
 					<MDTypography variant="caption" color="text">
-						Email Address:&nbsp;&nbsp;&nbsp;
+						tag:&nbsp;&nbsp;&nbsp;
 						<MDTypography variant="caption" fontWeight="medium">
-							{email}
+							{tag}
 						</MDTypography>
 					</MDTypography>
 				</MDBox>
 				<MDTypography variant="caption" color="text">
-					VAT Number:&nbsp;&nbsp;&nbsp;
+					content:&nbsp;&nbsp;&nbsp;
 					<MDTypography variant="caption" fontWeight="medium">
-						{vat}
+						{content}
 					</MDTypography>
 				</MDTypography>
 			</MDBox>
@@ -85,9 +85,9 @@ Bill.defaultProps = {
 // Typechecking props for the Bill
 Bill.propTypes = {
 	name: PropTypes.string.isRequired,
-	company: PropTypes.string.isRequired,
-	email: PropTypes.string.isRequired,
-	vat: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	tag: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
 	noGutter: PropTypes.bool
 };
 

@@ -2,7 +2,7 @@ import FetchData from '../../fetchData';
 
 const useReportsBarChartData = () => {
 	const { data: recipePosts } = FetchData('https://localhost:7250/api/RecipePosts');
-	const { data: accounts } = FetchData('https://localhost:7250/api/Accounts1');
+	const { data: accounts } = FetchData('https://localhost:7250/api/Accounts');
 	const roleUser = 3;
 	const roleChef = 2;
 	const roleAdmin = 1;

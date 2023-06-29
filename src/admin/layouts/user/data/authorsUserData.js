@@ -33,7 +33,7 @@ export default function Data() {
 
 	useEffect(() => {
 		const getData = async () => {
-			const { data } = await axios.get('https://localhost:7250/api/Accounts1');
+			const { data } = await axios.get('https://localhost:7250/api/Accounts');
 			const filteredData = data?.filter((item) => item.roleid === '3');
 			setData(filteredData);
 		};
