@@ -5,6 +5,7 @@ import "swiper/css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile";
 import Contact from "./contact/contact";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" element={<RecipesListPage />} />
         <Route path="/home" element={<RecipesListPage />} />
         <Route path="/list" element={<RecipesListPage />} />
+        <Route path="/add recipes" element={<AboutPage />} />
         <Route path="/detail/:id" element={<RecipesDetailPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />

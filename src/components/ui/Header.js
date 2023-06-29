@@ -4,7 +4,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const MENU = ["HOME", "MENU", "ABOUT", "CONTACT"]
+  const MENU = ["HOME", "MENU", "ADD RECIPES", "CONTACT"]
     ;
   const RIGHT = [
     {
