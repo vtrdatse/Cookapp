@@ -7,21 +7,17 @@ const useReportsBarChartData = () => {
 	const roleChef = 2;
 	const roleAdmin = 1;
 
-	const userAccountIds = accounts?.filter((account) => account.roleid == roleUser).map((account) => account.id);
+	const userAccountIds = accounts?.filter((account) => account.roleid == roleUser).map((account) => account.fullName);
 	const userRecipes =
-		recipePosts && userAccountIds
-			? recipePosts.filter((recipe) => userAccountIds.includes(recipe.ref_account))
-			: [];
-	const chefAccountIds = accounts?.filter((account) => account.roleid == roleChef).map((account) => account.id);
+		recipePosts && userAccountIds ? recipePosts.filter((recipe) => userAccountIds.includes(recipe.fullName)) : [];
+	const chefAccountIds = accounts?.filter((account) => account.roleid == roleChef).map((account) => account.fullName);
 	const chefRecipes =
-		recipePosts && chefAccountIds
-			? recipePosts.filter((recipe) => chefAccountIds.includes(recipe.ref_account))
-			: [];
-	const adminAccountIds = accounts?.filter((account) => account.roleid == roleAdmin).map((account) => account.id);
+		recipePosts && chefAccountIds ? recipePosts.filter((recipe) => chefAccountIds.includes(recipe.fullName)) : [];
+	const adminAccountIds = accounts
+		?.filter((account) => account.roleid == roleAdmin)
+		.map((account) => account.fullName);
 	const adminRecipes =
-		recipePosts && adminAccountIds
-			? recipePosts.filter((recipe) => adminAccountIds.includes(recipe.ref_account))
-			: [];
+		recipePosts && adminAccountIds ? recipePosts.filter((recipe) => adminAccountIds.includes(recipe.fullName)) : [];
 	const dataChart = {
 		labels: ['User', 'Chef', 'Admin'],
 		datasets: {

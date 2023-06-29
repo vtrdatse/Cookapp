@@ -7,6 +7,7 @@ import Icon from '@mui/material/Icon';
 import MDBox from '../../../components/MDBox';
 import MDTypography from '../../../components/MDTypography';
 import MDButton from '../../../components/MDButton';
+import MDAvatar from '../../../components/MDAvatar';
 
 // Material Dashboard 2 React context
 import { useMaterialUIController } from '../../../context';
@@ -35,6 +36,7 @@ function Bill({ name, id, tag, content, noGutter }) {
 					flexDirection={{ xs: 'column', sm: 'row' }}
 					mb={2}
 				>
+					<MDAvatar></MDAvatar>
 					<MDTypography variant="button" fontWeight="medium" textTransform="capitalize">
 						{name}
 					</MDTypography>
