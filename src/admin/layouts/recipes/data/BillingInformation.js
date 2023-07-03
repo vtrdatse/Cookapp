@@ -36,7 +36,7 @@ function BillingInformation() {
 						data.map((item) => {
 							return (
 								<Bill
-									name={item.title}
+									name={item.name}
 									id={item.id}
 									tag={item.tag}
 									content={item.content}

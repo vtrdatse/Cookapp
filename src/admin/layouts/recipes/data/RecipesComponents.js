@@ -8,11 +8,12 @@ import MDBox from '../../../components/MDBox';
 import MDTypography from '../../../components/MDTypography';
 import MDButton from '../../../components/MDButton';
 import MDAvatar from '../../../components/MDAvatar';
+import Base64ImageConverter from '../convertBase64';
 
 // Material Dashboard 2 React context
 import { useMaterialUIController } from '../../../context';
 
-function Bill({ name, id, tag, content, noGutter }) {
+function Bill({ name, id, tag, content, image, create_time }) {
 	const [controller] = useMaterialUIController();
 	const { darkMode } = controller;
 
@@ -25,7 +26,6 @@ function Bill({ name, id, tag, content, noGutter }) {
 			bgColor={darkMode ? 'transparent' : 'grey-100'}
 			borderRadius="lg"
 			p={3}
-			mb={noGutter ? 0 : 1}
 			mt={2}
 		>
 			<MDBox width="100%" display="flex" flexDirection="column">
@@ -36,7 +36,7 @@ function Bill({ name, id, tag, content, noGutter }) {
 					flexDirection={{ xs: 'column', sm: 'row' }}
 					mb={2}
 				>
-					<MDAvatar></MDAvatar>
+					<Base64ImageConverter image={image} />
 					<MDTypography variant="button" fontWeight="medium" textTransform="capitalize">
 						{name}
 					</MDTypography>
@@ -72,6 +72,12 @@ function Bill({ name, id, tag, content, noGutter }) {
 					content:&nbsp;&nbsp;&nbsp;
 					<MDTypography variant="caption" fontWeight="medium">
 						{content}
+					</MDTypography>
+				</MDTypography>
+				<MDTypography variant="caption" color="text">
+					Create:&nbsp;&nbsp;&nbsp;
+					<MDTypography variant="caption" fontWeight="medium">
+						{create_time}
 					</MDTypography>
 				</MDTypography>
 			</MDBox>
