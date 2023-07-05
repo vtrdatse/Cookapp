@@ -27,7 +27,6 @@ import sidenavLogoLabel from './styles/sidenav';
 import { useMaterialUIController, setMiniSidenav, setTransparentSidenav, setWhiteSidenav } from '../../context';
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
-	console.log(routes);
 	const [controller, dispatch] = useMaterialUIController();
 	const { miniSidenav, transparentSidenav, whiteSidenav, darkMode } = controller;
 	const location = useLocation();

@@ -14,7 +14,7 @@ import TableRow from '@mui/material/TableRow';
 import Icon from '@mui/material/Icon';
 import Autocomplete from '@mui/material/Autocomplete';
 
-// Material Dashboard 2 React components
+// Material Dashboard 2 React componentsS
 import MDBox from '../../../components/MDBox';
 import MDTypography from '../../../components/MDTypography';
 import MDInput from '../../../components/MDInput';
@@ -22,7 +22,10 @@ import MDPagination from '../../../components/MDPagination';
 
 // Material Dashboard 2 React example components
 import DataTableHeadCell from './DataTableHeadCell';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DataTableBodyCell from './DataTableBodyCell';
+import { Pagination } from '@mui/material';
 
 function DataTable({ entriesPerPage, canSearch, showTotalEntries, table, pagination, isSorted, noEndBorder }) {
 	const defaultValue = entriesPerPage.defaultValue ? entriesPerPage.defaultValue : 10;
@@ -70,15 +73,11 @@ function DataTable({ entriesPerPage, canSearch, showTotalEntries, table, paginat
 		</MDPagination>
 	));
 
-	// Handler for the input to set the pagination index
-	const handleInputPagination = ({ target: { value } }) =>
-		value > pageOptions.length || value < 0 ? gotoPage(0) : gotoPage(Number(value));
-
+	const handleChangePagination = (event, value) => {
+		gotoPage(Number(value - 1));
+	};
 	// Customized page options starting from 1
 	const customizedPageOptions = pageOptions.map((option) => option + 1);
-
-	// Setting value for the pagination input
-	const handleInputPaginationValue = ({ target: value }) => gotoPage(Number(value.value - 1));
 
 	// Search input value state
 	const [search, setSearch] = useState(globalFilter);
@@ -213,26 +212,34 @@ function DataTable({ entriesPerPage, canSearch, showTotalEntries, table, paginat
 						variant={pagination.variant ? pagination.variant : 'gradient'}
 						color={pagination.color ? pagination.color : 'info'}
 					>
-						{canPreviousPage && (
-							<MDPagination item onClick={() => previousPage()}>
-								<Icon sx={{ fontWeight: 'bold' }}>chevron_left</Icon>
-							</MDPagination>
-						)}
 						{renderPagination.length > 6 ? (
-							<MDBox width="5rem" mx={1}>
-								<MDInput
-									inputProps={{ type: 'number', min: 1, max: customizedPageOptions.length }}
-									value={customizedPageOptions[pageIndex]}
-									onChange={(handleInputPagination, handleInputPaginationValue)}
+							<MDBox mx={1}>
+								<Pagination
+									count={customizedPageOptions.length}
+									onChange={(event, value) => handleChangePagination(event, value)}
+									showFirstButton
+									showLastButton
+									color="info"
 								/>
 							</MDBox>
 						) : (
-							renderPagination
-						)}
-						{canNextPage && (
-							<MDPagination item onClick={() => nextPage()}>
-								<Icon sx={{ fontWeight: 'bold' }}>chevron_right</Icon>
-							</MDPagination>
+							<>
+								{canPreviousPage && (
+									<MDPagination item onClick={() => previousPage()}>
+										<Icon sx={{ fontWeight: 'bold' }}>
+											<ArrowBackIcon />
+										</Icon>
+									</MDPagination>
+								)}
+								{renderPagination}
+								{canNextPage && (
+									<MDPagination item onClick={() => nextPage()}>
+										<Icon sx={{ fontWeight: 'bold' }}>
+											<ArrowForwardIcon />
+										</Icon>
+									</MDPagination>
+								)}
+							</>
 						)}
 					</MDPagination>
 				)}
