@@ -21,7 +21,7 @@ import {
 import Card from '@mui/material/Card';
 import Divider from '@mui/material/Divider';
 import Icon from '@mui/material/Icon';
-
+import ScheduleIcon from '@mui/icons-material/Schedule';
 // Material Dashboard 2 React components
 import MDBox from '../../../../components/MDBox';
 import MDTypography from '../../../../components/MDTypography';
@@ -31,7 +31,7 @@ import configs from './configs';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
-function ReportsLineChart({ color, title, description, date, chart }) {
+function ReportsLineChart({ color, title, description, date, height, chart }) {
 	const { data, options } = configs(chart.labels || [], chart.datasets || {});
 
 	return (
@@ -44,10 +44,7 @@ function ReportsLineChart({ color, title, description, date, chart }) {
 							bgColor={color}
 							borderRadius="lg"
 							coloredShadow={color}
-							py={2}
-							pr={0.5}
-							mt={-5}
-							height="12.5rem"
+							height={height}
 						>
 							<Line data={data} options={options} redraw />
 						</MDBox>
@@ -64,7 +61,9 @@ function ReportsLineChart({ color, title, description, date, chart }) {
 					<Divider />
 					<MDBox display="flex" alignItems="center">
 						<MDTypography variant="button" color="text" lineHeight={1} sx={{ mt: 0.15, mr: 0.5 }}>
-							<Icon>schedule</Icon>
+							<Icon>
+								<ScheduleIcon />
+							</Icon>
 						</MDTypography>
 						<MDTypography variant="button" color="text" fontWeight="light">
 							{date}

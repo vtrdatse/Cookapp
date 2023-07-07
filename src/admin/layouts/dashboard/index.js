@@ -12,13 +12,17 @@ import ComplexStatisticsCard from '../../examples/Cards/StatisticsCards/ComplexS
 import { MdToday, MdRestaurant, MdPerson } from 'react-icons/md';
 import { LuChefHat } from 'react-icons/lu';
 import Data from './data/reportsBarChartData';
+import ReportsLineChartData from './data/reportsLineChartData';
 import PieChart from '../../examples/Charts/PieChart';
+import ReportsLineChart from '../../examples/Charts/LineCharts/ReportsLineChart';
 
 function Dashboard() {
+	const { dataLine } = ReportsLineChartData();
+	console.log(dataLine);
 	const { accounts, recipePosts, dataChart } = Data();
 	const user = accounts?.filter((account) => account.roleid == 3);
 	const chef = accounts?.filter((account) => account.roleid == 2);
-	console.log('this is dashboard');
+
 	return (
 		<DashboardLayout>
 			<DashboardNavbar />
@@ -95,6 +99,17 @@ function Dashboard() {
 								description="Chart"
 								height={400}
 								chart={dataChart}
+							/>
+						</MDBox>
+					</Grid>
+					<Grid item xs={12} md={6} lg={8}>
+						<MDBox mb={3}>
+							<ReportsLineChart
+								color="dark"
+								title="New Recipes Post Of Last Week"
+								date="just updated"
+								chart={dataLine}
+								height={200}
 							/>
 						</MDBox>
 					</Grid>

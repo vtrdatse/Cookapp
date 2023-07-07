@@ -12,6 +12,7 @@ import MDTypography from '../../../../components/MDTypography';
 
 // Material Dashboard 2 React examples
 import DataTable from '../../../../examples/Tables/DataTable';
+import ReportsLineChartData from '../../data/reportsLineChartData';
 
 // Data
 import data from 'layouts/admin/dashboard/components/data';

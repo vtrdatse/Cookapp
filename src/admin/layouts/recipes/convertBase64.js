@@ -28,7 +28,7 @@ function Base64ImageConverter({ image }) {
 
 	return (
 		<div>
-			<img src={convertToImage()} alt="Converted Image" />
+			<img src={convertToImage()} alt="Converted Image" style={{ width: 300 }} />
 		</div>
 	);
 }

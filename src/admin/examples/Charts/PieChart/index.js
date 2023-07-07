@@ -22,7 +22,6 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 function PieChart({ title, description, height, chart }) {
 	const { data, options } = configs(chart.labels || [], chart.datasets || {});
-	console.log(data);
 	const renderChart = (
 		<MDBox py={2} pr={2} pl={2}>
 			{title || description ? (
