@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './LoginForm.css';
+import './LoginFrom.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
-function LoginForm() {
+function LoginFrom() {
 	const [item, setItem] = useState(null);
 	const navigate = useNavigate();
 	const formik = useFormik({
@@ -35,6 +35,7 @@ function LoginForm() {
 			getAuth();
 		}
 	});
+	console.log('LOGGGGGGGGGGGGGGGGGGGGGGGGGGGGG');
 	const navigation = () => {
 		switch (item?.roleid) {
 			case '1':
@@ -91,4 +92,4 @@ function LoginForm() {
 	);
 }
 
-export default LoginForm;
+export default LoginFrom;
