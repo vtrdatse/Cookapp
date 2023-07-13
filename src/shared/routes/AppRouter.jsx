@@ -13,7 +13,6 @@ import Reviews from '../../pages/profile/reviews/index.jsx';
 import DetailRecipe from '../../pages/recipe/detail/index.jsx';
 import Recipes from '../../pages/recipe/index.jsx';
 import ProtectedRoute from './ProtectRoute.jsx';
-import Form from '../../pages/login/Form.jsx';
 export const AppRouter = () => {
 	const ScrollToTop = () => {
 		const { pathname } = useLocation();
@@ -43,7 +42,6 @@ export const AppRouter = () => {
 				<Route path="/profile/allrecipes-personal-recipes" element={<AllrecipesPersonalRecipes />} />
 				<Route path="/plan" element={<Plan />} />
 				<Route path="/profile/reviews" element={<Reviews />} />
-				<Route path="/account/*" element={<Form />}></Route>
 			</Routes>
 		</Router>
 	);
