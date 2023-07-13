@@ -3,7 +3,7 @@ const DetailIngerdientRecipe = ({ recipe }) => {
     return (<>
         {recipe && (
             <Row className="mt-5" gutter={16}>
-                <Col className="bg-[#fdba74] text-black" span={16}>
+                <Col className="bg-[#fdba74] text-black p-10" span={24}>
                     <h3>PREP TIME: {recipe.prepTime} MINS</h3>
                     <h3>ADDITIONAL TIME: {recipe.addTime} MINS</h3>
                     <h3>COOK TIME: {recipe.cookTime} MINS</h3>
@@ -14,7 +14,6 @@ const DetailIngerdientRecipe = ({ recipe }) => {
                     <h2>DIRECTIONS:</h2>
                     <h3>{recipe.direction}</h3>
                 </Col>
-                <Col className="bg-red-300" span={8}></Col>
             </Row>)}
     </>);
 }

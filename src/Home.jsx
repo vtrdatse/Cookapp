@@ -28,7 +28,7 @@ const Home = () => {
                         <Ingerdient />
                     </Col>
                     <Col span={24}>
-                        <PopularRecipes dataFake={API.food} />
+                        <PopularRecipes dataFake={API.food.slice(0,4)} />
                     </Col>
                     <Col span={24}>
                         <Gallery title={"VEGETABLE"} />

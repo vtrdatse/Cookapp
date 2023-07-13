@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 const LayoutNotAuth = ({ children }) => {
     return (
         <Layout>
-            <div className='p-2 min-h-screen flex justify-center items-center '>
+            <div className='py-2 min-h-screen'>
                 {children}
             </div>
         </Layout>

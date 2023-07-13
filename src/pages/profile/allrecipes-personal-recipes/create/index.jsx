@@ -85,6 +85,13 @@ const Create = () => {
                         <Input />
                     </Form.Item>
 
+                    <Form.Item
+                        label="Ingredient_2"
+                        name="first_name_2"
+                    >
+                        <Input />
+                    </Form.Item>
+
                     <Divider className="w-full"></Divider>
                     <h2 className="text-xl mb-2">Directions</h2>
                     <Form.Item
