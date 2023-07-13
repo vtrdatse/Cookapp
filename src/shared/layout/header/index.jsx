@@ -1,16 +1,22 @@
-import { Row, Col, Affix, Tooltip } from "antd";
+import { Row, Col, Affix, Tooltip, Drawer } from "antd";
 import {
     UserOutlined,
-    SearchOutlined
+    SearchOutlined,
+    MenuOutlined
 } from '@ant-design/icons';
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import Logo from "../../components/Logo";
 const Header = ({ showModal }) => {
     const [cookies, setCookie] = useCookies(['auth']);
     const [shouldChangeBackground, setShouldChangeBackground] = useState(false);
     const { pathname } = useLocation()
+    const [open, setOpen] = useState(false);
     const [isMenu, setIsMenu] = useState()
+    const onClose = () => {
+        setOpen(false);
+    };
     useEffect(() => {
         setIsMenu(pathname.split("/")[1])
     }, [pathname])
@@ -33,11 +39,11 @@ const Header = ({ showModal }) => {
     }, []);
     return (
         <Affix className="bg-[#fff] opacity-100 z-50" offsetTop={0}>
-            <Row align={"middle"} className={`${shouldChangeBackground ? 'bg-[#ecebeb] opacity-90': ''} p-5 text-black`} gutter={16}>
+            <Row align={"middle"} className={`${shouldChangeBackground ? 'bg-[#ecebeb] opacity-90' : ''} p-5 text-black`} gutter={16}>
                 <Col span={8}>
                     <h1 className="font-bold">
                         <Link to="/">
-                            <img src="./logo.png" width={100} height={100}/>
+                            <Logo />
                         </Link></h1>
                 </Col>
                 <Col className="hidden cursor-pointer md:block" span={14}>
@@ -48,6 +54,19 @@ const Header = ({ showModal }) => {
                         <Col lg={4} span={6}><Link to="/contact" className={isMenu === "contact" ? `bg-[#FFB07F] rounded-lg p-3 md:text-xl` : "hover:bg-[#FFB07F] rounded-lg p-3 md:text-xl"}>Contact</Link></Col>
                     </Row>
                 </Col>
+                <Col className="block cursor-pointer md:hidden" span={14}>
+
+                    <MenuOutlined onClick={() => setOpen(true)} className="float-right" />
+                    <Drawer placement="right" onClose={onClose} open={open}>
+                        <Row gutter={[24, 24]}>
+                            <Col span={24}><Link to="/" className={isMenu === "" ? `bg-[#FFB07F] rounded-lg p-3 md:text-xl` : "hover:bg-[#FFB07F] rounded-lg p-3 md:text-xl"}>Home</Link></Col>
+                            <Col span={24}><Link to="/plan" className={isMenu === "plan" ? `bg-[#FFB07F] rounded-lg p-3 md:text-xl` : "hover:bg-[#FFB07F] rounded-lg p-3 md:text-xl"}>Plan</Link></Col>
+                            <Col span={24}><Link to="/recipes" className={isMenu === "recipes" ? `bg-[#FFB07F] rounded-lg p-3 md:text-xl` : "hover:bg-[#FFB07F] rounded-lg p-3 md:text-xl"}>Recipes</Link></Col>
+                            <Col span={24}><Link to="/contact" className={isMenu === "contact" ? `bg-[#FFB07F] rounded-lg p-3 md:text-xl` : "hover:bg-[#FFB07F] rounded-lg p-3 md:text-xl"}>Contact</Link></Col>
+                        </Row>
+                    </Drawer>
+                </Col>
+
                 <Col className="hidden md:block" span={2}>
                     <Row>
                         <Col span={12}><SearchOutlined onClick={showModal} className="text-xl rounded-lg p-1" /></Col>

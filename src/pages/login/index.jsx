@@ -1,13 +1,14 @@
 import { Button, Checkbox, Form, Input, Row, Col, message } from 'antd';
 import LayoutNotAuth from "../../shared/layout/LayoutNotAuth"
 import jwt_decode from 'jwt-decode'
-import {setCookie } from 'cookies-next';
+import { setCookie } from 'cookies-next';
 import { authService } from '../../shared/services/auth.service';
 import { APP_SAVE_KEYS } from '../../shared/constants';
 import { useMutation } from 'react-query';
 import { useDispatch } from 'react-redux';
 import { login } from '../../shared/store/appSlice';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../../shared/components/Logo';
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Login = () => {
         mutationFn: (body) => authService.authenticated(body),
         onSuccess(data, _variables, _context) {
             const res = data.result
-            if(!res.token) return
+            if (!res.token) return
             const decodeData = jwt_decode(res.token.accessToken)
             if (decodeData) {
                 setCookie(APP_SAVE_KEYS.KEYS, res.accessToken, { maxAge: decodeData.exp });
@@ -43,8 +44,26 @@ const Login = () => {
     };
     return (
         <LayoutNotAuth>
-            <Row className='w-full h-full' gutter={24}>
+            <Row className='w-full h-full' gutter={24} justify="space-between" align="middle">
                 <Col span={12}>
+                    <div className="w-full h-screen" span={24}>
+                        <div
+                            className='w-full h-screen'
+                            style={{
+                                backgroundImage: `url("https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?w=2000")`,
+                                backgroundOrigin: 'initial',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: "cover",
+                                opacity: 1,
+                            }}
+                        ></div>
+                    </div>
+                </Col>
+                <Col span={12}>
+                    <div className='w-full flex justify-center items-center'>
+                        <Logo />
+                    </div>
                     <Form
                         className='flex flex-col justify-center items-center min-w-full'
                         layout='vertical'
@@ -101,19 +120,6 @@ const Login = () => {
                             </Button>
                         </Form.Item>
                     </Form>
-                </Col>
-                <Col span={12}>
-                    <div
-                        className=' h-[400px] w-full'
-                        style={{
-                            backgroundImage: `url("https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg")`,
-                            backgroundOrigin: 'initial',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: '100% 100%',
-                            opacity: 1,
-                        }}
-                    ></div>
                 </Col>
             </Row>
         </LayoutNotAuth>

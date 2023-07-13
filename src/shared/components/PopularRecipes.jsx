@@ -15,7 +15,7 @@ const PopularRecipes = ({ dataFake }) => {
             <div className='w-full text-black p-5'>
                 <Row className='w-full flex justify-center' align='middle' justify='space-between' gutter={32}>
                     {dataFake && dataFake.map((food, index) => (
-                        <Col className='text-center font-bold uppercase mt-5' key={index} sm={12} lg={6} span={6}>
+                        <Col className='text-center font-bold uppercase mt-5' key={index} xs={24} sm={12} lg={6} span={6}>
                             <div className='py-5 scale-90'>
                                 <Link to={`/recipes/${food.id}`}>
                                     <div

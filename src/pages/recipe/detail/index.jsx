@@ -18,7 +18,7 @@ const DetailRecipe = () => {
                         title: 'Home',
                     },
                     {
-                        title: <a href="">None</a>,
+                        title: <a href="/recipes">Recipes</a>,
                     },
                     {
                         title: `${id}`,
@@ -33,7 +33,7 @@ const DetailRecipe = () => {
                 <DetailIngerdientRecipe recipe={recipe} />
             </Col>
             <Col span={24}>
-                <PopularRecipes data={API.food}/>
+                <PopularRecipes dataFake={API.food}/>
             </Col>
             <Col span={24}>
                 <Gallery title={"FOOD"}/>
