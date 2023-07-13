@@ -19,7 +19,6 @@ const DetailPlan = ({ title, recipes }) => {
 	const handleCancel = () => {
 		setIsModalOpen(false);
 	};
-	console.log(recipes.image);
 	return (
 		<div className="mt-10">
 			<h2 className="text-xl text-center font-bold uppercase text-black bg-[#FFD9C0] mb-2">{title}</h2>
